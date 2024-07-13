@@ -140,7 +140,7 @@ namespace PropertyExample
         //     - Age的后台变量： '<Age>k__BackingField'
         //     - 自动生成的方法： get_Age : int32()  
         //     - 自动生成的方法： set_Age : int32()  
-        public int Age { get; set; }         //属性（property）--- 简略声明
+        public static int Age { get; set; }         //属性（property）--- 简略声明，
 
         private int id = 1;
         public int Id
