@@ -38,6 +38,8 @@ namespace DelegateExample
         - 缺点3：把委托回调、异步调用和多线程纠缠在一起，会让代码变得难以阅读和维护
         - 缺点4：委托使用不当可能造成内存泄漏和程序性能下降
     */
+
+
     // 声明自定义的 委托类型
     public delegate double Calc(double x, double y);
 
