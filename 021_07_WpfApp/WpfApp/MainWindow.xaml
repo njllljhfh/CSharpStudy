@@ -9,6 +9,5 @@
     <Grid>
         <TextBox x:Name="textBox1" Margin="10,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="34" RenderTransformOrigin="0.474,5.157" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         <Button x:Name="button1" Content="Click Me" Margin="10,49,10,0" VerticalAlignment="Top" Height="26" Click="ButtonClicked"/>
-
     </Grid>
 </Window>
