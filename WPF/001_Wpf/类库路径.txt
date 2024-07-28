@@ -1,0 +1,28 @@
+# bilibili 视频地址
+https://www.bilibili.com/video/BV1ht411e7Fe/?spm_id_from=333.337.search-card.all.click&vd_source=d5456c77ecfc61e7372a8a02b7e73d29
+
+
+# 在系统的开始菜单中 找 Developer Command Prompt for VS 2022 终端工具
+在该终端中执行以下命令，进行编译
+
+
+# 类库位置
+C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\PresentationFramework.dll
+
+
+# 查看参数
+csc /?
+
+
+# 编译成 exe 的命令（双击编译后的exe时，会弹出黑窗口）
+csc /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\PresentationFramework.dll" /t:exe MyApp.txt
+
+
+# 编译成 winexe 的命令（双击编译后的exe时，不会弹出黑窗口）
+csc /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\PresentationFramework.dll" /t:winexe MyApp.txt
+
+
+# 编译成 library（类库 .dll ） 的命令
+csc /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\PresentationFramework.dll" /t:library MyApp.txt
+
+
