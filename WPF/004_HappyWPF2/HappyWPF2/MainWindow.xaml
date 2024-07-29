@@ -1,0 +1,40 @@
+﻿<Window x:Class="HappyWPF2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HappyWPF2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Click="Button_Click" Margin="0,40,0,0" Height="40" HorizontalAlignment="Center" Width="120" VerticalAlignment="Top"  >
+            <!--标签的内容：夹在标签的开始标签 和 结束标签之间的东西-->
+            <!--属性标签 Button.Content: Button是对象的类名，Content是对象的属性-->
+            <Button.Content>
+                <Rectangle Width="20" Height="20" Stroke="DarkGreen" Fill="LawnGreen"/>
+            </Button.Content>
+        </Button>
+
+        <Rectangle Width="200" Height="160" Stroke="Blue">
+            <Rectangle.Fill>
+                <!--渐进色笔刷-->
+                <!--StartPoint="0,0" EndPoint="1,1" 就是默认值，可以省略-->
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <!--笔刷起始点: X="0" Y="0" 是矩形的左上角顶点-->
+                    <!--<LinearGradientBrush.StartPoint>-->
+                    <!--<Point X="0" Y="0"/>-->
+                    <!--</LinearGradientBrush.StartPoint>-->
+                    <!--笔刷结束点：X="1" Y="1" 是矩形的右下角顶点-->
+                    <!--<LinearGradientBrush.EndPoint>-->
+                    <!--<Point X="1" Y="1"/>-->
+                    <!--</LinearGradientBrush.EndPoint>-->
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Offset="0.2" Color="LightBlue"/>
+                        <GradientStop Offset="0.7" Color="DarkBlue"/>
+                        <GradientStop Offset="1" Color="Blue"/>
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+    </Grid>
+</Window>

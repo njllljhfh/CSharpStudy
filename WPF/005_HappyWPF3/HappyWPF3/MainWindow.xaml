@@ -1,0 +1,32 @@
+﻿<Window x:Class="HappyWPF3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HappyWPF3" 
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="240" Width="400" Background="LightBlue">
+    <Window.Resources>
+        <!-- 要导入 xmlns:sys="clr-namespace:System;assembly=mscorlib"-->
+        <sys:String x:Key="stringHello">Hello WPF!</sys:String>
+    </Window.Resources>
+    <Grid>
+        <!--
+        标签扩展: Text="{StaticResource ResourceKey=stringHello}" 
+            ResourceKey 可以不写
+        -->
+        <!--<TextBlock Height="24" Width="120" Background="LightBlue" Text="{StaticResource ResourceKey=stringHello}" />-->
+        <!--<TextBlock Height="24" Width="120" Background="LightBlue" Text="{StaticResource stringHello}" />-->
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24"/>
+            <RowDefinition Height="4"/>
+            <RowDefinition Height="24"/>
+        </Grid.RowDefinitions>
+        <!--让 TextBox 显示 滑动条当前的值-->
+        <!--标签扩展 的多个属性，用 逗号 分开-->
+        <TextBox x:Name="tb" Text="{Binding ElementName=sld,Path=Value}"/>
+        <Slider x:Name="sld" Grid.Row="2" Value="50" Maximum="100" Minimum="0"/>
+    </Grid>
+</Window>
